@@ -1,4 +1,5 @@
-# ui-notitas (Cualquier similitud con otra aplicación es mera coincidencia 😎)
+# ui-notitas
+Cualquier similitud con otra aplicación es mera coincidencia 😎
 
 ## Consignas
 

@@ -52,7 +52,7 @@ main {
 main section.new {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    padding: 20px;
 }
 main .new form {
     max-width: 600px;
@@ -109,11 +109,13 @@ main .new form button[type="submit"]:hover {
 ================ */
 
 main .list {
-    margin: 0 300px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
 }
 main .list .note {
-    width: 30%;
+    width: 32%;
     padding: 22px 22px;
     margin: 0 .5%;
     margin-bottom: 1.2vw;
@@ -122,6 +124,16 @@ main .list .note {
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
     cursor: pointer;
     transition: box-shadow 0.2s ease-in-out;
+}
+@media (max-width: 1024px) {
+    main .list .note {
+        width: 48%
+    }
+}
+@media (max-width: 740px) {
+    main .list .note {
+        width: 100%
+    }
 }
 main .list .note:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
@@ -137,16 +149,11 @@ main .list .note p {
 }
 
 main .list .note .edit {
-    height: 0;
     display: flex;
     margin-top: 20px;
     justify-content: flex-end;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-}
-
-main .list .note:hover .edit {
-    height: 25px;
 }
 
 main .list .note .edit > * {
@@ -158,12 +165,17 @@ main .list .note .edit form > * {
     border: 0;
 }
 
-main .list .note .edit > a {
-    color: #666
+main .list .note .edit > a, main .list .note .edit form > * {
+    color: rgba(0,0,0,.2);
+    transition: color 0.15s ease-out;
 }
 
-main .list .note .edit form > * {
-    color: red;
+main .list .note .edit > a:hover {
+    color: rgba(0,0,0,.8)
+}
+
+main .list .note .edit form > *:hover {
+    color: rgba(255,0,0,.8);
     cursor: pointer;
 }
 
